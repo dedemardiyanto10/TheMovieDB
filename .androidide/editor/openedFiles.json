@@ -1,0 +1,35 @@
+{
+  "allFiles": [
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/TheMovieDB/app/src/main/java/com/themoviedb/app/MainActivity.java",
+      "selection": {
+        "end": {
+          "column": 5,
+          "index": 16402,
+          "line": 360
+        },
+        "start": {
+          "column": 5,
+          "index": 16402,
+          "line": 360
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/TheMovieDB/app/src/main/java/com/themoviedb/app/NetworkChangeReceiver.java",
+      "selection": {
+        "end": {
+          "column": 72,
+          "index": 463,
+          "line": 12
+        },
+        "start": {
+          "column": 72,
+          "index": 463,
+          "line": 12
+        }
+      }
+    }
+  ],
+  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/TheMovieDB/app/src/main/java/com/themoviedb/app/NetworkChangeReceiver.java"
+}

@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     xmlns:tools="http://schemas.android.com/tools"
+     android:layout_height="match_parent"
+     android:layout_width="match_parent"
+     android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:background="@android:color/transparent"
+         android:id="@+id/appbar">
+
+        <com.google.android.material.appbar.MaterialToolbar
+             android:layout_height="?attr/actionBarSize"
+             android:layout_width="match_parent"
+             app:layout_scrollFlags="scroll|enterAlways"
+             android:id="@+id/toolbar">
+
+            <LinearLayout
+                 android:layout_height="wrap_content"
+                 android:layout_width="match_parent"
+                 android:orientation="horizontal"
+                 android:layout_gravity="center">
+
+                <LinearLayout
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:orientation="horizontal"
+                     android:layout_weight="1"
+                     android:layout_gravity="center">
+
+                    <LinearLayout
+                         android:layout_height="wrap_content"
+                         android:layout_width="match_parent"
+                         android:gravity="center"
+                         android:orientation="horizontal">
+
+                        <ImageView
+                             android:layout_height="40dp"
+                             android:layout_width="match_parent"
+                             android:src="@drawable/logo4"
+                             android:layout_gravity="center"
+                            android:contentDescription="TODO" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:orientation="horizontal"
+                     android:layout_weight="1"
+                     android:layout_gravity="center">
+
+                    <LinearLayout
+                         android:layout_height="wrap_content"
+                         android:layout_width="match_parent"
+                         android:gravity="end"
+                         android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btnSearch"
+                            style="?attr/materialIconButtonStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:icon="@drawable/search"
+                            app:iconTint="#01b4e4"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                        <Button
+                            style="?attr/materialIconButtonStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:icon="@drawable/more"
+                            app:iconTint="#01b4e4"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+         android:layout_height="match_parent"
+         android:layout_width="match_parent"
+         app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+             android:layout_height="match_parent"
+             android:layout_width="match_parent"
+             android:orientation="vertical">
+
+            <LinearLayout
+                 android:layout_height="wrap_content"
+                 android:layout_width="match_parent"
+                 android:orientation="horizontal"
+                 android:layout_gravity="center">
+
+                <LinearLayout
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:gravity="start"
+                     android:layout_weight="1">
+
+                    <TextView
+                         android:layout_height="wrap_content"
+                         android:layout_width="wrap_content"
+                         android:padding="10dp"
+                         android:textSize="18sp"
+                         android:fontFamily="sans-serif-black"
+                         android:textColor="@android:color/white"
+                         android:text="@string/trending"
+                         android:layout_gravity="center" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     android:gravity="center"
+                     android:layout_weight="0"
+                     android:layout_gravity="center">
+
+                    <com.google.android.material.button.MaterialButtonToggleGroup
+                         android:layout_height="30dp"
+                         android:layout_width="wrap_content"
+                         app:singleSelection="true"
+                         app:selectionRequired="true"
+                         app:checkedButton="@id/btnToday"
+                         android:id="@+id/tbTrending">
+
+                        <Button
+                            android:id="@+id/btnToday"
+                            style="?attr/materialButtonOutlinedStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-black"
+                            android:gravity="center"
+                            android:padding="1dp"
+                            android:text="@string/today"
+                            android:textSize="10sp"
+                            app:backgroundTint="@drawable/selector_today"
+                            app:rippleColor="#9001b4e4"
+                            app:strokeColor="#01b4e4"
+                            tools:ignore="TouchTargetSizeCheck" />
+
+                        <Button
+                            android:id="@+id/btnWeek"
+                            style="?attr/materialButtonOutlinedStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-black"
+                            android:gravity="center"
+                            android:padding="1dp"
+                            android:text="@string/this_week"
+                            android:textSize="10sp"
+                            app:backgroundTint="@drawable/selector_week"
+                            app:rippleColor="#9001b4e4"
+                            app:strokeColor="#01b4e4"
+                            tools:ignore="TouchTargetSizeCheck" />
+
+                    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+                </LinearLayout>
+
+                <LinearLayout
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:gravity="end"
+                     android:layout_weight="1">
+
+                    <Button
+                         android:layout_height="wrap_content"
+                         android:layout_width="wrap_content"
+                         app:icon="@drawable/down"
+                         android:fontFamily="sans-serif-black"
+                         app:iconTint="#01b4e4"
+                         android:textColor="@android:color/white"
+                         style="@style/Widget.Material3.Button.TextButton.Icon"
+                         android:id="@+id/btnTrending"
+                         android:text="@string/all" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                 android:layout_height="wrap_content"
+                 android:layout_width="match_parent"
+                 android:paddingEnd="5dp"
+                 android:paddingStart="5dp"
+                 android:id="@+id/shimmerTrending">
+
+                <LinearLayout
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:orientation="horizontal">
+
+                    <include
+                         layout="@layout/shimmer_trending_layout" />
+
+                    <include
+                         layout="@layout/shimmer_trending_layout" />
+
+                    <include
+                         layout="@layout/shimmer_trending_layout" />
+
+                </LinearLayout>
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                 android:layout_height="200dp"
+                 android:layout_width="match_parent"
+                 android:visibility="gone"
+                 android:paddingEnd="5dp"
+                 android:clipChildren="false"
+                 android:clipToPadding="false"
+                 android:paddingStart="5dp"
+                 app:layoutManager="com.google.android.material.carousel.CarouselLayoutManager"
+                 android:id="@+id/rvTrending" />
+
+            <LinearLayout
+                 android:layout_height="wrap_content"
+                 android:layout_width="match_parent"
+                 android:orientation="horizontal"
+                 android:layout_gravity="center">
+
+                <TextView
+                     android:layout_height="wrap_content"
+                     android:layout_width="0dp"
+                     android:padding="10dp"
+                     android:textSize="18sp"
+                     android:fontFamily="sans-serif-black"
+                     android:textColor="@android:color/white"
+                     android:layout_weight="1"
+                     android:text="@string/now_playing"
+                     android:layout_gravity="center" />
+
+                <Button
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     app:icon="@drawable/down"
+                     android:fontFamily="sans-serif-black"
+                     app:iconTint="#01b4e4"
+                     android:textColor="@android:color/white"
+                     style="@style/Widget.Material3.Button.TextButton.Icon"
+                     android:id="@+id/btnNowPlaying"
+                     android:text="All" />
+
+            </LinearLayout>
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                 android:layout_height="wrap_content"
+                 android:layout_width="match_parent"
+                 android:paddingEnd="5dp"
+                 android:paddingStart="5dp"
+                 android:id="@+id/shimmerNowPlaying">
+
+                <LinearLayout
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:orientation="horizontal">
+
+                    <include
+                         layout="@layout/shimmer_layout" />
+
+                    <include
+                         layout="@layout/shimmer_layout" />
+
+                    <include
+                         layout="@layout/shimmer_layout" />
+
+                </LinearLayout>
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                 android:layout_height="match_parent"
+                 android:layout_width="match_parent"
+                 android:visibility="gone"
+                 android:paddingEnd="5dp"
+                 android:paddingStart="5dp"
+                 android:id="@+id/rvNowPlaying" />
+
+            <LinearLayout
+                 android:layout_height="wrap_content"
+                 android:layout_width="match_parent"
+                 android:orientation="horizontal"
+                 android:layout_gravity="center">
+
+                <TextView
+                     android:layout_height="wrap_content"
+                     android:layout_width="0dp"
+                     android:padding="10dp"
+                     android:textSize="18sp"
+                     android:fontFamily="sans-serif-black"
+                     android:textColor="@android:color/white"
+                     android:layout_weight="1"
+                     android:text="@string/popular"
+                     android:layout_gravity="center" />
+
+                <Button
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     app:icon="@drawable/down"
+                     android:fontFamily="sans-serif-black"
+                     app:iconTint="#01b4e4"
+                     android:textColor="@android:color/white"
+                     style="@style/Widget.Material3.Button.TextButton.Icon"
+                     android:id="@+id/btnPopular"
+                    android:text="@string/all" />
+
+            </LinearLayout>
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                 android:layout_height="wrap_content"
+                 android:layout_width="match_parent"
+                 android:paddingEnd="5dp"
+                 android:paddingStart="5dp"
+                 android:id="@+id/shimmerPopular">
+
+                <LinearLayout
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:orientation="horizontal">
+
+                    <include
+                         layout="@layout/shimmer_layout" />
+
+                    <include
+                         layout="@layout/shimmer_layout" />
+
+                    <include
+                         layout="@layout/shimmer_layout" />
+
+                </LinearLayout>
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                 android:layout_height="match_parent"
+                 android:layout_width="match_parent"
+                 android:visibility="gone"
+                 android:paddingEnd="5dp"
+                 android:paddingStart="5dp"
+                 android:id="@+id/rvPopular" />
+
+            <LinearLayout
+                 android:layout_height="wrap_content"
+                 android:layout_width="match_parent"
+                 android:orientation="horizontal"
+                 android:layout_gravity="center">
+
+                <TextView
+                     android:layout_height="wrap_content"
+                     android:layout_width="0dp"
+                     android:padding="10dp"
+                     android:textSize="18sp"
+                     android:fontFamily="sans-serif-black"
+                     android:textColor="@android:color/white"
+                     android:layout_weight="1"
+                     android:text="@string/top_rated"
+                     android:layout_gravity="center" />
+
+                <Button
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     app:icon="@drawable/down"
+                     android:fontFamily="sans-serif-black"
+                     app:iconTint="#01b4e4"
+                     android:textColor="@android:color/white"
+                     style="@style/Widget.Material3.Button.TextButton.Icon"
+                     android:id="@+id/btnTopRated"
+                    android:text="@string/all" />
+
+            </LinearLayout>
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                 android:layout_height="wrap_content"
+                 android:layout_width="match_parent"
+                 android:paddingEnd="5dp"
+                 android:paddingStart="5dp"
+                 android:id="@+id/shimmerTopRated">
+
+                <LinearLayout
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:orientation="horizontal">
+
+                    <include
+                         layout="@layout/shimmer_layout" />
+
+                    <include
+                         layout="@layout/shimmer_layout" />
+
+                    <include
+                         layout="@layout/shimmer_layout" />
+
+                </LinearLayout>
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                 android:layout_height="match_parent"
+                 android:layout_width="match_parent"
+                 android:visibility="gone"
+                 android:paddingEnd="5dp"
+                 android:paddingStart="5dp"
+                 android:id="@+id/rvTopRated" />
+
+            <LinearLayout
+                 android:layout_height="wrap_content"
+                 android:layout_width="match_parent"
+                 android:orientation="horizontal"
+                 android:layout_gravity="center">
+
+                <TextView
+                     android:layout_height="wrap_content"
+                     android:layout_width="0dp"
+                     android:padding="10dp"
+                     android:textSize="18sp"
+                     android:fontFamily="sans-serif-black"
+                     android:textColor="@android:color/white"
+                     android:layout_weight="1"
+                     android:text="@string/up_coming"
+                     android:layout_gravity="center" />
+
+                <Button
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     app:icon="@drawable/down"
+                     android:fontFamily="sans-serif-black"
+                     app:iconTint="#01b4e4"
+                     android:textColor="@android:color/white"
+                     style="@style/Widget.Material3.Button.TextButton.Icon"
+                     android:id="@+id/btnUpComing"
+                     android:text="@string/all" />
+
+            </LinearLayout>
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                 android:layout_height="wrap_content"
+                 android:layout_width="match_parent"
+                 android:paddingEnd="5dp"
+                 android:paddingStart="5dp"
+                 android:id="@+id/shimmerUpComing">
+
+                <LinearLayout
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:orientation="horizontal">
+
+                    <include
+                         layout="@layout/shimmer_layout" />
+
+                    <include
+                         layout="@layout/shimmer_layout" />
+
+                    <include
+                         layout="@layout/shimmer_layout" />
+
+                </LinearLayout>
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                 android:layout_height="match_parent"
+                 android:layout_width="match_parent"
+                 android:visibility="gone"
+                 android:paddingEnd="5dp"
+                 android:paddingStart="5dp"
+                 android:id="@+id/rvUpComing" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

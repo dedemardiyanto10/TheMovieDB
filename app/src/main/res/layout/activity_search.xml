@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     xmlns:tools="http://schemas.android.com/tools"
+     android:layout_height="match_parent"
+     android:layout_width="match_parent"
+     android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:background="@android:color/transparent"
+         android:id="@+id/appbar">
+
+        <com.google.android.material.appbar.MaterialToolbar
+             android:layout_height="?attr/actionBarSize"
+             android:layout_width="match_parent"
+             app:layout_scrollFlags="scroll|enterAlways"
+             app:navigationIconTint="#01b4e4"
+             app:title="@string/app_name"
+             app:navigationIcon="?attr/homeAsUpIndicator"
+             android:id="@+id/toolbar">
+
+            <com.google.android.material.card.MaterialCardView
+                 android:layout_height="40dp"
+                 android:layout_width="match_parent"
+                 android:layout_marginEnd="20dp"
+                 app:cardBackgroundColor="@android:color/white"
+                 style="?attr/materialCardViewElevatedStyle"
+                 app:contentPadding="0dp"
+                 app:cardCornerRadius="100dp"
+                 android:layout_gravity="center">
+
+                <LinearLayout
+                     android:layout_height="match_parent"
+                     android:layout_width="match_parent"
+                     android:orientation="horizontal">
+
+                    <EditText
+                         android:layout_height="wrap_content"
+                         android:layout_width="match_parent"
+                         android:paddingStart="20dp"
+                         android:padding="10dp"
+                         android:textSize="14sp"
+                         android:singleLine="true"
+                         android:textColor="@android:color/black"
+                         android:layout_gravity="center"
+                         android:background="@android:color/transparent"
+                         android:hint="search movie.."
+                         android:textColorHint="@android:color/darker_gray"
+                         android:fontFamily="sans-serif-black"
+                         android:maxLines="1"
+                         android:layout_weight="1"
+                         android:id="@+id/etSearch" />
+
+                    <Button
+                         android:layout_height="wrap_content"
+                         android:layout_width="wrap_content"
+                         app:icon="@drawable/clear"
+                         app:iconTint="#01b4e4"
+                         android:visibility="gone"
+                         style="?attr/materialIconButtonStyle"
+                         android:id="@+id/btnClear" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+         android:layout_height="match_parent"
+         android:layout_width="match_parent"
+         app:layout_behavior="@string/appbar_scrolling_view_behavior"
+         android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+             android:layout_height="match_parent"
+             android:layout_width="match_parent"
+             android:paddingEnd="5dp"
+             android:paddingStart="5dp"
+             android:id="@+id/rvSearchQuery" />
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

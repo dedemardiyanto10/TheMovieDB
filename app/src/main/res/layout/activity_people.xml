@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     xmlns:tools="http://schemas.android.com/tools"
+     android:layout_height="match_parent"
+     android:layout_width="match_parent"
+     android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:background="@android:color/transparent"
+         android:id="@+id/appbar">
+
+        <com.google.android.material.appbar.MaterialToolbar
+             android:layout_height="?attr/actionBarSize"
+             android:layout_width="match_parent"
+             app:layout_scrollFlags="scroll|enterAlways"
+             app:navigationIconTint="#01b4e4"
+             app:title="@string/app_name"
+             app:navigationIcon="?attr/homeAsUpIndicator"
+             android:id="@+id/toolbar" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+         android:layout_height="match_parent"
+         android:layout_width="match_parent"
+         app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+             android:layout_height="match_parent"
+             android:layout_width="match_parent"
+             android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                 android:layout_height="400dp"
+                 android:layout_width="match_parent"
+                 android:padding="10dp"
+                 android:id="@+id/rvPeople" />
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:gravity="center"
+                 android:padding="3dp"
+                 android:textSize="18sp"
+                 android:fontFamily="sans-serif-black"
+                 android:textColor="@android:color/white"
+                 android:layout_marginTop="8dp"
+                 android:layout_gravity="center"
+                 android:id="@+id/tvTitle" />
+
+            <LinearLayout
+                 android:layout_height="wrap_content"
+                 android:layout_width="match_parent"
+                 android:padding="10dp"
+                 android:orientation="vertical">
+
+                <TextView
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     android:textSize="10sp"
+                     android:fontFamily="sans-serif-condesed"
+                     android:textColor="@android:color/white"
+                     android:layout_gravity="center"
+                     android:id="@+id/tvKnownAs" />
+
+                <LinearLayout
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:orientation="horizontal"
+                     android:layout_marginTop="16dp"
+                     android:layout_gravity="center">
+
+                    <LinearLayout
+                         android:layout_height="wrap_content"
+                         android:layout_width="match_parent"
+                         android:orientation="vertical"
+                         android:layout_weight="1"
+                         android:layout_gravity="center">
+
+                        <TextView
+                             android:layout_height="wrap_content"
+                             android:layout_width="wrap_content"
+                             android:textSize="10sp"
+                             android:fontFamily="sans-serif-condesed"
+                             android:textColor="@android:color/white"
+                             android:layout_gravity="center"
+                             android:text="Popularity" />
+
+                        <TextView
+                             android:layout_height="wrap_content"
+                             android:layout_width="wrap_content"
+                             android:textSize="12sp"
+                             android:fontFamily="sans-serif-black"
+                             android:textColor="@android:color/white"
+                             android:paddingTop="3dp"
+                             android:layout_gravity="center"
+                             android:id="@+id/tvRating" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                         android:layout_height="wrap_content"
+                         android:layout_width="match_parent"
+                         android:orientation="vertical"
+                         android:layout_weight="1"
+                         android:layout_gravity="center">
+
+                        <TextView
+                             android:layout_height="wrap_content"
+                             android:layout_width="wrap_content"
+                             android:textSize="10sp"
+                             android:fontFamily="sans-serif-condesed"
+                             android:textColor="@android:color/white"
+                             android:layout_gravity="center"
+                             android:text="Known for department" />
+
+                        <TextView
+                             android:layout_height="wrap_content"
+                             android:layout_width="wrap_content"
+                             android:textSize="12sp"
+                             android:fontFamily="sans-serif-black"
+                             android:textColor="@android:color/white"
+                             android:paddingTop="3dp"
+                             android:layout_gravity="center"
+                             android:id="@+id/tvDepartment" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                         android:layout_height="wrap_content"
+                         android:layout_width="match_parent"
+                         android:orientation="vertical"
+                         android:layout_weight="1"
+                         android:layout_gravity="center">
+
+                        <TextView
+                             android:layout_height="wrap_content"
+                             android:layout_width="wrap_content"
+                             android:textSize="10sp"
+                             android:fontFamily="sans-serif-condesed"
+                             android:textColor="@android:color/white"
+                             android:layout_gravity="center"
+                             android:text="Gender" />
+
+                        <TextView
+                             android:layout_height="wrap_content"
+                             android:layout_width="wrap_content"
+                             android:textSize="12sp"
+                             android:fontFamily="sans-serif-black"
+                             android:textColor="@android:color/white"
+                             android:paddingTop="3dp"
+                             android:layout_gravity="center"
+                             android:id="@+id/tvGender" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:orientation="vertical"
+                     android:layout_marginTop="16dp"
+                     android:layout_gravity="center">
+
+                    <TextView
+                         android:layout_height="wrap_content"
+                         android:layout_width="match_parent"
+                         android:textSize="10sp"
+                         android:fontFamily="sans-serif-condesed"
+                         android:textColor="@android:color/white"
+                         android:layout_gravity="center"
+                         android:text="Birthday" />
+
+                    <TextView
+                         android:layout_height="wrap_content"
+                         android:layout_width="wrap_content"
+                         android:textSize="12sp"
+                         android:fontFamily="sans-serif-black"
+                         android:textColor="@android:color/white"
+                         android:paddingTop="3dp"
+                         android:id="@+id/tvBirthday" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:orientation="vertical"
+                     android:layout_marginTop="16dp"
+                     android:layout_gravity="center">
+
+                    <TextView
+                         android:layout_height="wrap_content"
+                         android:layout_width="match_parent"
+                         android:textSize="10sp"
+                         android:fontFamily="sans-serif-condesed"
+                         android:textColor="@android:color/white"
+                         android:layout_gravity="center"
+                         android:text="Place of birth" />
+
+                    <TextView
+                         android:layout_height="wrap_content"
+                         android:layout_width="wrap_content"
+                         android:textSize="12sp"
+                         android:fontFamily="sans-serif-black"
+                         android:textColor="@android:color/white"
+                         android:paddingTop="3dp"
+                         android:id="@+id/tvPlace" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:orientation="vertical"
+                     android:layout_marginTop="16dp"
+                     android:layout_gravity="center">
+
+                    <TextView
+                         android:layout_height="wrap_content"
+                         android:layout_width="match_parent"
+                         android:textSize="10sp"
+                         android:fontFamily="sans-serif-condesed"
+                         android:textColor="@android:color/white"
+                         android:layout_gravity="center"
+                         android:text="Deathday" />
+
+                    <TextView
+                         android:layout_height="wrap_content"
+                         android:layout_width="wrap_content"
+                         android:textSize="12sp"
+                         android:fontFamily="sans-serif-black"
+                         android:textColor="@android:color/white"
+                         android:paddingTop="3dp"
+                         android:id="@+id/tvDeathday" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:orientation="vertical"
+                     android:layout_marginTop="16dp"
+                     android:layout_gravity="center">
+
+                    <TextView
+                         android:layout_height="wrap_content"
+                         android:layout_width="match_parent"
+                         android:textSize="10sp"
+                         android:fontFamily="sans-serif-condesed"
+                         android:textColor="@android:color/white"
+                         android:layout_gravity="center"
+                         android:text="Biography" />
+
+                    <TextView
+                         android:layout_height="wrap_content"
+                         android:layout_width="wrap_content"
+                         android:textSize="12sp"
+                         android:fontFamily="sans-serif-black"
+                         android:textColor="@android:color/white"
+                         android:paddingTop="3dp"
+                         android:id="@+id/tvBiography" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:orientation="vertical"
+                     android:layout_marginTop="16dp"
+                     android:layout_gravity="center">
+
+                    <TextView
+                         android:layout_height="wrap_content"
+                         android:layout_width="match_parent"
+                         android:textSize="10sp"
+                         android:fontFamily="sans-serif-condesed"
+                         android:textColor="@android:color/white"
+                         android:layout_gravity="center"
+                         android:text="Starring in movies" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                         android:layout_height="match_parent"
+                         android:layout_width="match_parent"
+                         android:layout_marginTop="5dp"
+                         android:id="@+id/rvCastMovies" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
